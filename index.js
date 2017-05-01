@@ -171,8 +171,25 @@
 // type.sayAge();
 // type.sayName();
 
+// var name = "The Window";
+// var object = {
+//   name: "My Object",
+//   getNameFunc: function() {
+//     return function() {
+//       return this.name;
+//     };
+//   }
+// };
+// console.log(object.getNameFunc()()); //"The Window" （在非严格模式下） 
+// console.log(top === window); // top指向最外层窗口
+// console.log(document.implementation.hasFeature('core', '3.0')); // DOM级别检测
 
-//   document.write("100"+100+"<br>");
+
+
+
+
+
+// document.write("100"+100+"<br>");
 // var box=[6,15,62,45,16,94];
 // document.write(box+"<br>");
 // box.sort(compare);
@@ -367,6 +384,8 @@
 // box.item(2).style.color="red";
 // box.item(2).innerHTML=box.length;
 window.onload = function() {
+
+
   // var name=document.getElementsByName("name1");
   // name[0].value="我的值变了。";
   // alert(name[0].getAttribute("type"));
