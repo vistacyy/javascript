@@ -109,6 +109,7 @@
 // 'na'.repeat(0) // ""
 // 'na'.repeat(2.9) // 取整"nana"
 // 'na'.repeat('na') // 转数字 ""
+// 'na'.repeat(NaN) // ""
 // 'na'.repeat(-1) //报错
 
 //15.
@@ -131,7 +132,7 @@
 // console.log(/(?<=\$)\d+/.exec('Benjamin Franklin is on the $100 bill'));  // ["100"]
 // console.log(/(?<!\$)\d+/.exec('it’s is worth about €90')); // ["90"]
 
-// 20.Number.isFinite()和Number.isNaN()传统的全局方法isFinite()和isNaN()的区别在于非数值一律返回false
+// 20.Number.isFinite()和Number.isNaN()与传统的全局方法isFinite()和isNaN()的区别在于非数值一律返回false
 
 // 21.Number.isInteger()是否为整数3和3.0被视为同一个值
 
@@ -218,7 +219,9 @@ ES7新增了一个指数运算符（**）
 // console.log(...[1, 2, 3])
 // 1 2 3
 
-// 33.函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。除了this，以下三个变量在箭头函数之中也是不存在的，指向外层函数的对应变量：arguments、super、new.target。
+// 33.函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+// 除了this，以下三个变量在箭头函数之中也是不存在的，指向外层函数的对应变量：arguments、super、new.target。
+// var s2=0;
 // function Timer() {
 //   this.s1 = 0;
 //   this.s2 = 0;
@@ -229,11 +232,15 @@ ES7新增了一个指数运算符（**）
 //     this.s2++;
 //   }, 1000);
 // }
-// var timer = new Timer();
+// let timer = new Timer();
+
 // setTimeout(() => console.log('s1: ', timer.s1), 3100);
 // setTimeout(() => console.log('s2: ', timer.s2), 3100);
+// setTimeout(() => console.log('s2: ', s2), 3100);
+
 // s1: 3
 // s2: 0
+// s2: 3
 
 // 34.ES6允许在对象之中，只写属性名，不写属性值。这时，属性值等于属性名所代表的变量。方法也可以简写。
 // function f(x, y) {
@@ -245,7 +252,8 @@ ES7新增了一个指数运算符（**）
 // }
 // console.log(f(1, 2)); // Object {x: 1, y: 2}
 
-// 35.ES6允许字面量定义对象时，用表达式作为属性名,即把表达式放在方括号内。表达式还可以用于定义方法名。属性名表达式与简洁表示法，不能同时使用，会报错。
+// 35.ES6允许字面量定义对象时，用表达式作为属性名,即把表达式放在方括号内。表达式还可以用于定义方法名。
+// 属性名表达式与简洁表示法，不能同时使用，会报错。
 // let propKey = 'foo';
 // let obj = {
 //   [propKey]: true,
@@ -264,7 +272,8 @@ ES7新增了一个指数运算符（**）
 // Object.is(+0, -0) // false
 // Object.is(NaN, NaN) // true
 
-// 37.Object.assign方法用于对象的合并，将源对象的所有可枚举属性，复制到目标对象（第一个参数），同名属性后面的会覆盖前面的属性。字符串会以数组形式拷贝入目标对象,
+// 37.Object.assign方法用于对象的合并，将源对象的所有可枚举属性，复制到目标对象（第一个参数），同名属性后面的会覆盖前面的属性。
+// 字符串会以数组形式拷贝入目标对象,如果无法转成对象，就会跳过。如果undefined和null、数值、布尔值不在首参数，就不会报错。
 // var v1 = 'abc';
 // var v2 = true;
 // var v3 = 10;
@@ -274,10 +283,10 @@ ES7新增了一个指数运算符（**）
 // 38.对象属性的遍历 
 /*
 38.1 for...in循环遍历对象自身的和继承的可枚举属性（不含Symbol属性）
-38.2 Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）。
-38.3 Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）。
-38.4 Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性。
-38.5 Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举。
+38.2 Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）。
+38.3 Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性。
+38.4 Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举。
+38.5 Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）。
 38.6 Object.values方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值。
 38.7 Object.entries方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组。
 */
@@ -294,7 +303,8 @@ ES7新增了一个指数运算符（**）
 
 // 41.Symbol值作为对象属性名时，不能用点运算符,要用方括号，相当于表达式属性。
 
-// 42.Symbol作为属性名，该属性不会出现在for...in、for...of循环中，也不会被Object.keys()、Object.getOwnPropertyNames()返回。但是，它也不是私有属性，有一个Object.getOwnPropertySymbols方法，可以获取指定对象的所有Symbol属性名。
+// 42.Symbol作为属性名，该属性不会出现在for...in、for...of循环中，也不会被Object.keys()、Object.getOwnPropertyNames()返回。
+// 但是，它也不是私有属性，有一个Object.getOwnPropertySymbols方法，可以获取指定对象的所有Symbol属性名。
 // var obj = {};
 // var a = Symbol('a');
 // var b = Symbol('b');
@@ -310,27 +320,50 @@ ES7新增了一个指数运算符（**）
 // var s2 = Symbol("foo"); //Symbol()写法没有登记机制
 // Symbol.keyFor(s2) // undefined
 
-// 44.
+// 44.Set类似于数组，但是成员的值都是唯一的不会发生类型转换，所以5和"5"是两个不同的值,两个对象总是不相等的。
+// var set = new Set([1, 2, 3, 4, 4]);
+// console.log(set);
+
+// 45.WeakSet的成员只能是对象，不可遍历,没有size属性
+// 46.Map数据结构是键值对的集合，“键”是各种类型的值
+
+// 47.
+// var obj = {
+//   get val() {
+//     return this.val;
+//   },
+//   set val(x) {
+//     this.val = x;
+//   }
+// }
+
 // var obj = new Proxy({}, {
-//   get: function (target, key, receiver) {
+//   get: function(target, key, receiver) {
 //     console.log(`getting ${key}!`);
 //     return Reflect.get(target, key, receiver);
 //   },
-//   set: function (target, key, value, receiver) {
+//   set: function(target, key, value, receiver) {
 //     console.log(`setting ${key}!`);
 //     return Reflect.set(target, key, value, receiver);
 //   }
 // });
-
 // obj.count = 1;
 // ++obj.count
 
-// 45.Set类似于数组，但是成员的值都是唯一的不会发生类型转换，所以5和"5"是两个不同的值,两个对象总是不相等的。
-// var set = new Set([1, 2, 3, 4, 4]);
-// console.log(set);
+// 如果name属性部署了读取函数（getter），则读取函数的this绑定receiver
+// var myObject = {
+//   foo: 1,
+//   bar: 2,
+//   get baz() {
+//     return this.foo + this.bar;
+//   },
+// };
+// var myReceiverObject = {
+//   foo: 4,
+//   bar: 4,
+// };
+// Reflect.get(myObject, 'baz', myReceiverObject) // 8
 
-// 46.WeakSet的成员只能是对象，不可遍历,没有size属性
-// 47.Map数据结构是键值对的集合，“键”是各种类型的值
 
 // 48.Iterator 的概念 
 // function makeIterator(array) {
@@ -590,7 +623,7 @@ class Foo {
 Foo.classMethod() // 'hello'
 var foo = new Foo();
 foo.classMethod()
-// TypeError: foo.classMethod is not a function
+  // TypeError: foo.classMethod is not a function
 
 // 69.ES6明确规定，Class内部只有静态方法，没有静态属性。
 // 以下两种写法都无效
@@ -701,12 +734,3 @@ foo.classMethod()
 // import { obj } from './lib';
 // obj.prop = 123; // OK
 // obj = {}; // TypeError
-
-
-
-
-
-
-
-
-
