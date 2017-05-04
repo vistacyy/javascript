@@ -364,24 +364,41 @@ ES7新增了一个指数运算符（**）
 // };
 // Reflect.get(myObject, 'baz', myReceiverObject) // 8
 
-
-// 48.Iterator 的概念 
-// function makeIterator(array) {
-//   var nextIndex = 0;
-//   return {
-//     next: function() {
-//       return nextIndex < array.length ?
-//         {value: array[nextIndex++], done: false} :
-//         {value: undefined, done: true};
-//     }
-//   };
+// 48 Promise
+// function timeout(ms) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(resolve, ms, 'done');
+//   });
 // }
-// var it = makeIterator(['a', 'b']);
-// console.log(it.next()); // { value: "a", done: false }
-// console.log(it.next()); // { value: "b", done: false }
-// console.log(it.next()); // { value: undefined, done: true }
 
-// 49.for...of循环要部署了Symbol.iterator属性,可以使用的包括数组、Set和Map结构、某些类似数组的对象（DOM NodeList对象）、Generator对象，字符串
+// timeout(100).then((value) => {
+//   console.log(value);
+// });
+
+// 49.Iterator 的概念
+// 当使用for...of循环遍历某种数据结构时，该循环会自动去寻找Iterator接口。 
+// for...of中的变量值为value的值
+// class RangeIterator {
+//   constructor(start, stop) {
+//     this.value = start;
+//     this.stop = stop;
+//   }
+//   [Symbol.iterator]() { return this; }
+//   next() {
+//     var value = this.value;
+//     if (value < this.stop) {
+//       this.value++;
+//       return {done: false, value: value};
+//     }
+//     return {done: true, value: undefined};
+//   }
+// }
+// function range(start, stop) {
+//   return new RangeIterator(start, stop);
+// }
+// for (var value of range(0, 3)) {
+//   console.log(value);
+// }
 
 // 50.Generator函数
 // function* helloWorldGenerator() {
@@ -414,8 +431,8 @@ ES7新增了一个指数运算符（**）
 
 // 第一次调用next方法时，就能够输入值
 // function wrapper(generatorFunction) {
-//   return function (...args) {
-//     let generatorObject = generatorFunction(...args);
+//   return function () {
+//     let generatorObject = generatorFunction();
 //     generatorObject.next();
 //     return generatorObject;
 //   };
@@ -549,6 +566,7 @@ ES7新增了一个指数运算符（**）
 //   }
 // }
 // Foo() // TypeError: Class constructor Foo cannot be invoked without 'new'
+
 // 62.Class不存在变量提升
 // new Foo(); // ReferenceError
 // class Foo {}
@@ -615,15 +633,15 @@ ES7新增了一个指数运算符（**）
 // arr[0] // undefined
 
 // 68.类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”。父类的静态方法，可以被子类继承。
-class Foo {
-  static classMethod() {
-    return 'hello';
-  }
-}
-Foo.classMethod() // 'hello'
-var foo = new Foo();
-foo.classMethod()
-  // TypeError: foo.classMethod is not a function
+// class Foo {
+//   static classMethod() {
+//     return 'hello';
+//   }
+// }
+// Foo.classMethod() // 'hello'
+// var foo = new Foo();
+// foo.classMethod()
+// TypeError: foo.classMethod is not a function
 
 // 69.ES6明确规定，Class内部只有静态方法，没有静态属性。
 // 以下两种写法都无效
