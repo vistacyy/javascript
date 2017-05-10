@@ -185,8 +185,34 @@
 // console.log(document.implementation.hasFeature('core', '3.0')); // DOM级别检测
 
 
+// Boolean(false) //显示转换 false
+// new Boolean(false) // 创建对像 true
 
 
+// 闭包
+// var a = 'outer',
+//   b = 'outerWindow';
+// function checkScope() {
+//   let a = 'inner';
+//   function f() {
+//     console.log(a, '    ', this.b);
+//   }
+//   return f;
+// }
+// var o = {
+//   b: 'outerO',
+//   scope: checkScope()
+// }
+// o.scope(); // inner      outerO
+// checkScope()();  // inner      outerWindow  使用let时为undefined
+
+// 当正则表达式带有全局标志g时，二者表现不一致。
+// match会返回所有符合条件的匹配项，并以数组形式返回。数组第一项存放第一个匹配项，数组第二项存放第二个匹配项...依次类推。
+// exec则永远返回第一个匹配项。但是当连续调用exec时，则每次的返回值都是下一个匹配项。
+// let string = 'cat,bat,kat';
+// let pattern = /.?(at)/g;
+// console.log(pattern.exec(string));
+// console.log(string.match(pattern));
 
 
 // document.write("100"+100+"<br>");
