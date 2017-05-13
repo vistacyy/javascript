@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Javascript测试</title>
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <script src="./jquery-3.2.1.js"></script>
+</head>
+
+<body>
+  <style>
+
+  </style>
+
+  <div id="test">Click Here!</div>
+
+
+  <script>
+    // $("#test").click(jQuery.proxy(obj, "test"));
+    $("#test").click(function() {
+      $.ajax({
+        type: 'GET',
+        url: 'xhr.php',
+        data: 'name=abc&age=18',
+        success: function(res) {
+          console.log(res);
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

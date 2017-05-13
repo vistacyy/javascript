@@ -409,338 +409,339 @@
 // box.style.color="red";
 // box.item(2).style.color="red";
 // box.item(2).innerHTML=box.length;
-window.onload = function() {
 
 
-  // var name=document.getElementsByName("name1");
-  // name[0].value="我的值变了。";
-  // alert(name[0].getAttribute("type"));
-  // name[0].removeAttribute("value");
-  // var box=document.getElementById("box1");
-  // var box=document.getElementsByTagName("div");
-  // document.write(box.previousSibling.nodeName+"<br>");
-  // document.write(box.previousSibling.nodeType+"<br>");
-  // document.write(box.previousSibling.nodeValue+"<br>");
-  // document.write(box.attributes["class"].nodeName+"<br>");
-  // document.write(box.attributes["class"].nodeType+"<br>");
-  // document.write(box.attributes["class"].nodeValue+"<br>");
-  // document.write(box.childNodes[0].nodeName+"<br>");
-  // document.write(box.childNodes[0].nodeType+"<br>");
-  // document.write(box.childNodes[0].nodeValue+"<br>");
-  // document.write(box.attributes.getNamedItem("class").nodeValue+"<br>");
-  // alert(box.ownerDocument.nodeName);
-  // alert(box.previousSibling.nodeValue);
-  // var box5=document.createElement("div");
-  // var text5=document.createTextNode("boxContent5");
-  // box5.appendChild(text5);
-  // box5.setAttribute("class","boxClass5");
-  // box5.setAttribute("id","box5");
-  // box.parentNode.insertBefore(box5,box);
-  // box.parentNode.replaceChild(box5,box.nextSibling);
-  // box.parentNode.removeChild(box.previousSibling.previousSibling);
-  // alert(box.children.length);
-  // alert(box.textContent);
-  // alert(box.innerText);
-  // alert(style.color);
-  // var style=window.getComputedStyle?window.getComputedStyle(box1,null):box1.currentStyle;
-  // alert(style.width+"<width height>"+style.height);
-  // alert(box1.clientWidth+"client"+box1.clientHeight);
-  // alert(box1.scrollWidth+"scroll"+box1.scrollHeight);
-  // alert(box1.offsetWidth+"offset"+box1.offsetHeight);
-  // alert(box1.clientLeft+"clientLeft"+box1.clientTop);
-  // alert(box1.offsetLeft+"offsetLeft"+box1.offsetTop);
-  // alert(box1.offsetParent);
-  // var button=document.getElementById("button");
-  // button.onclick=function(){
-  //  alert(box1.scrollLeft+"scrollLeft"+box1.scrollTop);
-  // };   
-  // var button2=document.getElementById("button2");
-  // button2.onclick=function(){
-  //  box1.scrollTop=0;
-  // };
-  // box1.onclick=function(event){
-  //  var e = event || window.event;
-  //  alert(e.clientX+"client"+e.clientY+"\n"+
-  //        e.offsetX+"offset"+e.offsetY+"\n"+
-  //        e.screenX+"screen"+e.screenY);
-  // };
-  // alert(screen.width+"screen"+screen.height);
-  // var box1=document.getElementById("box1");
-  // var gbc=box1.getBoundingClientRect();
-  // alert(gbc.top);
-  // alert(document.documentElement.clientTop);
-  // document.onmouseup=function(event){
-  //  var event = event || window.event;
-  //  switch(getButton(event)){
-  //      case 0:
-  //          if (event.shiftKey) { //ctrlKey,altKey
-  //              alert("你按下了左键。shift");
-  //          }else{
-  //              alert("你按下了左键。");
-  //          }
-  //          break;
-  //      case 2:
-  //          if (event.shiftKey) {
-  //              alert("你按下了右键。shift");
-  //          }else{
-  //              alert("你按下了右键。");
-  //          }
-  //          break;
-  //  }
-  // };
-  // function getButton(event){
-  //  if (event) {
-  //      return event.button;
-  //  }
-  //  var event = window.event;
-  //  switch(event.button){
-  //      case 1:
-  //          return 0;
-  //      case 4:
-  //          return 1;
-  //      case 2:
-  //          return 2;
-  //  }
-  // }
-  // document.onkeyup=function(e){
-  //  alert(e.keyCode);
-  // };    
-  // document.onkeypress=function(e){
-  //  alert(e.charCode);
-  // };
-  // var box1=document.getElementById("box1");
-  // box1.addEventListener("contextmenu",function(e){
-  //  e.preventDefault();
-  // },false);
-  // window.onbeforeunload = function(event) { 
-  //  return confirm("确定退出吗"); 
-  // }
-  // box1.addEventListener("mouseover",function(e){
-  //  alert(e.relatedTarget);
-  // },false);
-  // box1.addEventListener("mouseout",function(e){
-  //  alert(e.relatedTarget);
-  // },false);
-  // var button=document.getElementById("button");
-  // var text=document.getElementById("text");
-  // button.addEventListener("click",function(){
-  //     alert(text.value);
-  //     text.select();
-  //  text.setSelectionRange(0,1);
-  //  text.focus();
-  // },false);
-  // text.addEventListener("select",function(){
-  //  alert(text.value.substring(text.selectionStart,text.selectionEnd));
-  // },false);
-  // var select1=document.getElementById("select1");
-  // alert(select1.type);
-  // button.addEventListener("click",function(){
-  // alert(select1.selectedIndex);
-  //  select1.selectedIndex=2;
-  // },false);
-  // var date=new Date();
-  // date.setDate(date.getDate()+7);
-  // document.cookie="user="+encodeURIComponent("李炎恢")+";expires="+date;
-  // alert(decodeURIComponent(document.cookie));
+// window.onload = function() {
 
-  //IE--xml
-  // function createXMLDOM(){
-  //  var version=["MSXML2.DOMDocument.6.0","MSXML2.DOMDocument.3.0","MSXML2.DOMDocument"];
-  //  for (var i = 0; i < version.length; i++) {
-  //      try{
-  //          var xmlDom=new ActiveXObject(version[i]);
-  //          return xmlDom;
-  //      }catch(e){
+// var name=document.getElementsByName("name1");
+// name[0].value="我的值变了。";
+// alert(name[0].getAttribute("type"));
+// name[0].removeAttribute("value");
+// var box=document.getElementById("box1");
+// var box=document.getElementsByTagName("div");
+// document.write(box.previousSibling.nodeName+"<br>");
+// document.write(box.previousSibling.nodeType+"<br>");
+// document.write(box.previousSibling.nodeValue+"<br>");
+// document.write(box.attributes["class"].nodeName+"<br>");
+// document.write(box.attributes["class"].nodeType+"<br>");
+// document.write(box.attributes["class"].nodeValue+"<br>");
+// document.write(box.childNodes[0].nodeName+"<br>");
+// document.write(box.childNodes[0].nodeType+"<br>");
+// document.write(box.childNodes[0].nodeValue+"<br>");
+// document.write(box.attributes.getNamedItem("class").nodeValue+"<br>");
+// alert(box.ownerDocument.nodeName);
+// alert(box.previousSibling.nodeValue);
+// var box5=document.createElement("div");
+// var text5=document.createTextNode("boxContent5");
+// box5.appendChild(text5);
+// box5.setAttribute("class","boxClass5");
+// box5.setAttribute("id","box5");
+// box.parentNode.insertBefore(box5,box);
+// box.parentNode.replaceChild(box5,box.nextSibling);
+// box.parentNode.removeChild(box.previousSibling.previousSibling);
+// alert(box.children.length);
+// alert(box.textContent);
+// alert(box.innerText);
+// alert(style.color);
+// var style=window.getComputedStyle?window.getComputedStyle(box1,null):box1.currentStyle;
+// alert(style.width+"<width height>"+style.height);
+// alert(box1.clientWidth+"client"+box1.clientHeight);
+// alert(box1.scrollWidth+"scroll"+box1.scrollHeight);
+// alert(box1.offsetWidth+"offset"+box1.offsetHeight);
+// alert(box1.clientLeft+"clientLeft"+box1.clientTop);
+// alert(box1.offsetLeft+"offsetLeft"+box1.offsetTop);
+// alert(box1.offsetParent);
+// var button=document.getElementById("button");
+// button.onclick=function(){
+//  alert(box1.scrollLeft+"scrollLeft"+box1.scrollTop);
+// };   
+// var button2=document.getElementById("button2");
+// button2.onclick=function(){
+//  box1.scrollTop=0;
+// };
+// box1.onclick=function(event){
+//  var e = event || window.event;
+//  alert(e.clientX+"client"+e.clientY+"\n"+
+//        e.offsetX+"offset"+e.offsetY+"\n"+
+//        e.screenX+"screen"+e.screenY);
+// };
+// alert(screen.width+"screen"+screen.height);
+// var box1=document.getElementById("box1");
+// var gbc=box1.getBoundingClientRect();
+// alert(gbc.top);
+// alert(document.documentElement.clientTop);
+// document.onmouseup=function(event){
+//  var event = event || window.event;
+//  switch(getButton(event)){
+//      case 0:
+//          if (event.shiftKey) { //ctrlKey,altKey
+//              alert("你按下了左键。shift");
+//          }else{
+//              alert("你按下了左键。");
+//          }
+//          break;
+//      case 2:
+//          if (event.shiftKey) {
+//              alert("你按下了右键。shift");
+//          }else{
+//              alert("你按下了右键。");
+//          }
+//          break;
+//  }
+// };
+// function getButton(event){
+//  if (event) {
+//      return event.button;
+//  }
+//  var event = window.event;
+//  switch(event.button){
+//      case 1:
+//          return 0;
+//      case 4:
+//          return 1;
+//      case 2:
+//          return 2;
+//  }
+// }
+// document.onkeyup=function(e){
+//  alert(e.keyCode);
+// };    
+// document.onkeypress=function(e){
+//  alert(e.charCode);
+// };
+// var box1=document.getElementById("box1");
+// box1.addEventListener("contextmenu",function(e){
+//  e.preventDefault();
+// },false);
+// window.onbeforeunload = function(event) { 
+//  return confirm("确定退出吗"); 
+// }
+// box1.addEventListener("mouseover",function(e){
+//  alert(e.relatedTarget);
+// },false);
+// box1.addEventListener("mouseout",function(e){
+//  alert(e.relatedTarget);
+// },false);
+// var button=document.getElementById("button");
+// var text=document.getElementById("text");
+// button.addEventListener("click",function(){
+//     alert(text.value);
+//     text.select();
+//  text.setSelectionRange(0,1);
+//  text.focus();
+// },false);
+// text.addEventListener("select",function(){
+//  alert(text.value.substring(text.selectionStart,text.selectionEnd));
+// },false);
+// var select1=document.getElementById("select1");
+// alert(select1.type);
+// button.addEventListener("click",function(){
+// alert(select1.selectedIndex);
+//  select1.selectedIndex=2;
+// },false);
+// var date=new Date();
+// date.setDate(date.getDate()+7);
+// document.cookie="user="+encodeURIComponent("李炎恢")+";expires="+date;
+// alert(decodeURIComponent(document.cookie));
 
-  //      }
-  //  }
-  //  throw new Error("您的系统不支持MSXML!");
-  // }
-  // var xmlDom=createXMLDOM();
-  // xmlDom.loadXML("<root version='1.0'><user>Lee</user></root>");
-  // alert(xmlDom.xml);
-  // var user=xmlDom.getElementsByTagName('user')[0];
-  // alert(user.tagName);
-  // var user=xmlDom.selectSingleNode("root/user[1]");
-  // alert(user.xml);
+//IE--xml
+// function createXMLDOM(){
+//  var version=["MSXML2.DOMDocument.6.0","MSXML2.DOMDocument.3.0","MSXML2.DOMDocument"];
+//  for (var i = 0; i < version.length; i++) {
+//      try{
+//          var xmlDom=new ActiveXObject(version[i]);
+//          return xmlDom;
+//      }catch(e){
 
-  // xmlDom.async=true;
-  // xmlDom.onreadystatechange=function(){
-  //  if(xmlDom.readyState == 4){
-  //      if(xmlDom.parseError == 0){
-  //          alert(xmlDom.xml);
-  //      }else{
-  //          throw Error("错误行号:"+xmlDom.parseError.line+
-  //                      "错误解释:"+xmlDom.parseError.reason);
-  //      }
-  //  }
-  // };
-  // xmlDom.load("test.xml");
+//      }
+//  }
+//  throw new Error("您的系统不支持MSXML!");
+// }
+// var xmlDom=createXMLDOM();
+// xmlDom.loadXML("<root version='1.0'><user>Lee</user></root>");
+// alert(xmlDom.xml);
+// var user=xmlDom.getElementsByTagName('user')[0];
+// alert(user.tagName);
+// var user=xmlDom.selectSingleNode("root/user[1]");
+// alert(user.xml);
+
+// xmlDom.async=true;
+// xmlDom.onreadystatechange=function(){
+//  if(xmlDom.readyState == 4){
+//      if(xmlDom.parseError == 0){
+//          alert(xmlDom.xml);
+//      }else{
+//          throw Error("错误行号:"+xmlDom.parseError.line+
+//                      "错误解释:"+xmlDom.parseError.reason);
+//      }
+//  }
+// };
+// xmlDom.load("test.xml");
 
 
-  //DOM2--xml
-  // var xmlParser=new DOMParser();
-  // var str="<root version='1.0'><user>Lee</user><user>Jin</user></root>";
-  // var xmlDom=xmlParser.parseFromString(str,"text/xml");
-  // alert(xmlDom.getElementsByTagName("user")[0].tagName);
-  // var result=xmlDom.evaluate("root/user",xmlDom,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
-  // alert(result.singleNodeValue.tagName);
-  // var serializer = new XMLSerializer();
-  // var xml=serializer.serializeToString(xmlDom);
-  // alert(xml);
+//DOM2--xml
+// var xmlParser=new DOMParser();
+// var str="<root version='1.0'><user>Lee</user><user>Jin</user></root>";
+// var xmlDom=xmlParser.parseFromString(str,"text/xml");
+// alert(xmlDom.getElementsByTagName("user")[0].tagName);
+// var result=xmlDom.evaluate("root/user",xmlDom,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
+// alert(result.singleNodeValue.tagName);
+// var serializer = new XMLSerializer();
+// var xml=serializer.serializeToString(xmlDom);
+// alert(xml);
 
-  //兼容字符创建XMLDOM
-  // function strToXMl(str){
-  //     var xmlDom=null;
-  //     //DOM2
-  //     if(typeof window.DOMParser != "undefined") {
-  //         var xmlParser = new DOMParser();
-  //         xmlDom = xmlParser.parseFromString(str,"text/xml");
-  //         var error = xmlDom.getElementsByTagName("parsererror");
-  //         if(error.length > 0) {
-  //             throw new Error("DOM2 xml 解析错误"+error[0].textContent);
-  //         }
-  //     }else if (typeof window.ActiveXObject != "undefined") { //IE
-  //         var versions = ["MSXML2.DOMDocument.6.0","MSXML2.DOMDocument.3.0","MSXML2.DOMDocument"];
-  //         for (var i = 0; i < versions.length; i++) {
-  //             try {
-  //                 xmlDom = new ActiveXObject(versions[i]);
-  //             } catch(e) {
+//兼容字符创建XMLDOM
+// function strToXMl(str){
+//     var xmlDom=null;
+//     //DOM2
+//     if(typeof window.DOMParser != "undefined") {
+//         var xmlParser = new DOMParser();
+//         xmlDom = xmlParser.parseFromString(str,"text/xml");
+//         var error = xmlDom.getElementsByTagName("parsererror");
+//         if(error.length > 0) {
+//             throw new Error("DOM2 xml 解析错误"+error[0].textContent);
+//         }
+//     }else if (typeof window.ActiveXObject != "undefined") { //IE
+//         var versions = ["MSXML2.DOMDocument.6.0","MSXML2.DOMDocument.3.0","MSXML2.DOMDocument"];
+//         for (var i = 0; i < versions.length; i++) {
+//             try {
+//                 xmlDom = new ActiveXObject(versions[i]);
+//             } catch(e) {
 
-  //             }
-  //         }
-  //         xmlDom.loadXML(str);
-  //         if(xmlDom.parseError != 0){
-  //             throw new Error("IE解析XML错误"+xmlDom.parseError.reason);
-  //         }
-  //     }else{
-  //         throw new Error("无法解析XML,请升级浏览器.");
-  //     }
-  //     return xmlDom;
-  // }
+//             }
+//         }
+//         xmlDom.loadXML(str);
+//         if(xmlDom.parseError != 0){
+//             throw new Error("IE解析XML错误"+xmlDom.parseError.reason);
+//         }
+//     }else{
+//         throw new Error("无法解析XML,请升级浏览器.");
+//     }
+//     return xmlDom;
+// }
 
-  // function serializeXML(xmlDom){
-  //     var xml="";
-  //     //w3c
-  //     if(typeof window.XMLSerializer != "undefined") {
-  //         var serializer = new XMLSerializer();
-  //         xml = serializer.serializeToString(xmlDom);
-  //     }else if(typeof xmlDom.xml != "undefined"){ //ie
-  //         xml = xmlDom.xml;
-  //     }else{
-  //         throw new Error("无法解析XML字符,请升级浏览器");
-  //     }
-  //     return xml;
-  // }
-  // var xmlDom = strToXMl(str);
-  // var xml = serializeXML(xmlDom);
-  // console.log(xmlDom);
+// function serializeXML(xmlDom){
+//     var xml="";
+//     //w3c
+//     if(typeof window.XMLSerializer != "undefined") {
+//         var serializer = new XMLSerializer();
+//         xml = serializer.serializeToString(xmlDom);
+//     }else if(typeof xmlDom.xml != "undefined"){ //ie
+//         xml = xmlDom.xml;
+//     }else{
+//         throw new Error("无法解析XML字符,请升级浏览器");
+//     }
+//     return xml;
+// }
+// var xmlDom = strToXMl(str);
+// var xml = serializeXML(xmlDom);
+// console.log(xmlDom);
 
-  // var box = '[{"name":"a","age":1},{"name":"b","age":2}]';
-  // var json=JSON.parse(box);
-  // console.log(json);
-  // var box = [{"name":"a","age":1},{"name":"b","age":2}];
-  // // var json=JSON.stringify(box,['age']);
-  // var json = JSON.stringify(box,function(key,value){
-  //     switch(key){
-  //         case "name":
-  //             return "Mr." + value;
-  //             break;
-  //         case "age":
-  //             return value + "year";
-  //             break;
-  //         default:
-  //             return value;
-  //     }
-  // },4);
-  // alert(json);
+// var box = '[{"name":"a","age":1},{"name":"b","age":2}]';
+// var json=JSON.parse(box);
+// console.log(json);
+// var box = [{"name":"a","age":1},{"name":"b","age":2}];
+// // var json=JSON.stringify(box,['age']);
+// var json = JSON.stringify(box,function(key,value){
+//     switch(key){
+//         case "name":
+//             return "Mr." + value;
+//             break;
+//         case "age":
+//             return value + "year";
+//             break;
+//         default:
+//             return value;
+//     }
+// },4);
+// alert(json);
 
-  // IE6-AJAX
-  // function createXMLDOM(){
-  //  var version=["MSXML2.XMLHttp.6.0","MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"];
-  //  for (var i = 0; i < version.length; i++) {
-  //      try{
-  //          var xmlDom=new ActiveXObject(version[i]);
-  //          return xmlDom;
-  //      }catch(e){
+// IE6-AJAX
+// function createXMLDOM(){
+//  var version=["MSXML2.XMLHttp.6.0","MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"];
+//  for (var i = 0; i < version.length; i++) {
+//      try{
+//          var xmlDom=new ActiveXObject(version[i]);
+//          return xmlDom;
+//      }catch(e){
 
-  //      }
-  //  }
-  //  throw new Error("您的系统不支持MSXML!");
-  // }
+//      }
+//  }
+//  throw new Error("您的系统不支持MSXML!");
+// }
 
-  // var xhr=new XMLHttpRequest();
-  // var xmlDom=null;
-  // document.addEventListener("click",function(){
-  //     xhr.open("get","test.xml",true);
-  //     xhr.send(null);
+// var xhr=new XMLHttpRequest();
+// var xmlDom=null;
+// document.addEventListener("click",function(){
+//     xhr.open("get","test.xml",true);
+//     xhr.send(null);
 
-  //     xhr.onreadystatechange=function(){
-  //         if(xhr.readyState==4){
-  //             if(xhr.status == 200){
-  //                 alert(xhr.responseText);
-  //                 // alert(xhr.getAllResponseHeaders());
-  //                 // console.log(xhr.responseXML);
-  //                 //xmlDom=xhr.responseXML;
-  //             }else{
-  //                 alert("失败: "+xhr.status+"原因: "+xhr.statusText);
-  //             }
-  //         }
-  //     };
-  // },false);
-  /*
-      //兼容ajax
-      function ajax(obj){
-          var xhr=new XMLHttpRequest();
-          obj.url=obj.url+"?rand="+Math.random();
-          obj.data=params(obj.data);
-          if(obj.method === "get") {
-              obj.url=obj.url+"&"+obj.data;
-          }
-          if (obj.async === true) {
-              xhr.onreadystatechange=function(){
-                  if(xhr.readyState == 4) {
-                      callback();
-                  }
-              };
-          }
-          xhr.open(obj.method,obj.url,obj.async);
-          if(obj.method==="post"){
-              xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-              xhr.send(obj.data);
-          }else if(obj.method === "get"){
-              xhr.send(null);
-          }
-          if(obj.async === false){
-              callback();
-          }
-          //回调函数
-          function callback(){
-              if(xhr.status == 200) {
-                  obj.success(xhr.responseText);
-              }else{
-                  console.log("数据返回失败"+xhr.status+":"+xhr.statusText);
-              }
-          }
-          //对象转网址hash
-          function params(data){
-              var arr=[];
-              for(var i in data){
-                  arr.push(encodeURIComponent(i)+"="+encodeURIComponent(data[i]));
-              }
-              return arr.join("&");
-          }
-      }
+//     xhr.onreadystatechange=function(){
+//         if(xhr.readyState==4){
+//             if(xhr.status == 200){
+//                 alert(xhr.responseText);
+//                 // alert(xhr.getAllResponseHeaders());
+//                 // console.log(xhr.responseXML);
+//                 //xmlDom=xhr.responseXML;
+//             }else{
+//                 alert("失败: "+xhr.status+"原因: "+xhr.statusText);
+//             }
+//         }
+//     };
+// },false);
+/*
+    //兼容ajax
+    function ajax(obj){
+        var xhr=new XMLHttpRequest();
+        obj.url=obj.url+"?rand="+Math.random();
+        obj.data=params(obj.data);
+        if(obj.method === "get") {
+            obj.url=obj.url+"&"+obj.data;
+        }
+        if (obj.async === true) {
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4) {
+                    callback();
+                }
+            };
+        }
+        xhr.open(obj.method,obj.url,obj.async);
+        if(obj.method==="post"){
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send(obj.data);
+        }else if(obj.method === "get"){
+            xhr.send(null);
+        }
+        if(obj.async === false){
+            callback();
+        }
+        //回调函数
+        function callback(){
+            if(xhr.status == 200) {
+                obj.success(xhr.responseText);
+            }else{
+                console.log("数据返回失败"+xhr.status+":"+xhr.statusText);
+            }
+        }
+        //对象转网址hash
+        function params(data){
+            var arr=[];
+            for(var i in data){
+                arr.push(encodeURIComponent(i)+"="+encodeURIComponent(data[i]));
+            }
+            return arr.join("&");
+        }
+    }
 
-      ajax({
-          method:"post",
-             url:"test.php",
-           async:true,
-            data:{url:"baidu"},
-         success:function(responseText){
-                     alert(responseText);
-                 },
-      });
-  */
+    ajax({
+        method:"post",
+           url:"test.php",
+         async:true,
+          data:{url:"baidu"},
+       success:function(responseText){
+                   alert(responseText);
+               },
+    });
+*/
 
-};
+// };
