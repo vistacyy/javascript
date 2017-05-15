@@ -1,5 +1,9 @@
-.a{
-    height: 30px;
-    background-color:#eee;
-    border:1px solid #ccc;
+.a {
+  height: 30px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.carousel-img {
+  margin: 0 auto;
 }
